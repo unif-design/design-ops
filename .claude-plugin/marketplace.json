@@ -1,0 +1,22 @@
+{
+  "name": "design-ops",
+  "owner": {
+    "name": "unif-design",
+    "email": "382724935@qq.com"
+  },
+  "metadata": {
+    "description": "设计系统运维 skills —— 把 @unif 设计系统同步到 claude.ai/design。",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "design-ops",
+      "description": "设计系统运维:把 @unif/react-native-design 同步到 claude.ai/design,含 React Native 跑浏览器运行时的适配层、组件分类与预览卡片。",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/design-sync"
+      ]
+    }
+  ]
+}

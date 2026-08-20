@@ -1,0 +1,13 @@
+/* 只服务 design-sync:让预览 .tsx 里的 `react-native` 解析到 react-native-web。
+   bundle 侧不依赖它(走 build-web-entry.mjs 预打包),但 converter 编译预览时会用上,
+   于是预览能用 <View>/<Text> 这种 RN 工程师的真实写法,示例可直接复制回 RN 项目。
+   注意:这里只能用块注释 —— converter 剥离 // 行注释的正则会把 "//" 形式的
+   JSON 注释 key 整行截断,导致解析失败、paths 插件静默失效。 */
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "react-native": ["../website/node_modules/react-native-web/dist/index.js"]
+    }
+  }
+}
